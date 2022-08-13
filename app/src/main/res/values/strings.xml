@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Github App</string>
+    <string name="icon_github">Icon Github</string>
+    <string name="github">Github</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="country">Country</string>
+    <string name="company">Company</string>
+    <string name="repo">Repository</string>
+    <string name="quote">expand your network\nand stay connected</string>
+    <string name="num">000</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="favorite">Favorite</string>
+</resources>

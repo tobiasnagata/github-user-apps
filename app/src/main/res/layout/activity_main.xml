@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rv_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_github"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="30dp">
+
+        <ImageView
+            android:id="@+id/github_logo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/icon_github"
+            android:src="@drawable/github_logo_inverted" />
+
+        <SearchView
+            android:id="@+id/sv_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quote"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_rounded" />
+
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/github_logo"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/quote"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/github_logo"
+            android:gravity="center_vertical"
+            android:text="@string/github"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+            <ToggleButton
+                android:id="@+id/btn_mode"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/mode_toggle"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+            <ImageButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/favorite_white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_navbar"
+        tools:listitem="@layout/list_item" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_navbar"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
